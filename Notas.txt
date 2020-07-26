@@ -1,0 +1,8 @@
+-------extencion------
+react code snippets
+-----Para crear el proyecto react-----
+npx create-react-app nombredelproyecto
+------para agregar prop-types-----
+yarn add prop-types
+------para agregar icons weather de react--------
+yarn add react-weathericons

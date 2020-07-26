@@ -1,0 +1,37 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.weatherDataContent{
+    background: rgba(248,181,0,1) ;
+    color:purple;
+    border-radius: 10px;
+    padding:25px;
+}
+
+.weatherExtraInfoContent{
+    background: rgb(246, 171, 163);
+    padding: 5px;
+}
+
+.weatherTemperatureContent{
+    background: rgb(250, 224, 78);
+}
+
+.temperature{
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.temperatureType{
+    margin: 0 5px;
+    font-weight: bold;
+    color: black;
+
+}
+
+.wicon{
+    color: black;
+    margin-right: 5px;
+}
