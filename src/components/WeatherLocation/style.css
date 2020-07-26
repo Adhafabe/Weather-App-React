@@ -1,9 +1,21 @@
 .weatherLocationContent{
-     background: black;
-     font-weight: 100;
-        border-radius: 10px 10px 0 0;
+        background: black;
+        font-weight: 100;
+        border-radius: 10px;
+        padding: 25px;
 }
 
 .location{
 
+}
+
+.btnUpdate{
+        padding: 10px;
+        border-radius: 15px;
+        margin-top: 15px;
+        width: 200px;
+        font-weight: bold;
+        color: white;
+        border: 1px solid #2e0346;
+        background: linear-gradient(to right, #2e0346, #9f40d6);
 }

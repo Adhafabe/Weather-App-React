@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
+import convert from 'convert-units';
 import Location from './Location';
 import WeatherData from './WeatherData';
+import transformWeather  from './../../services/transformWeather';
+import {api_weather} from './../../constans/api_url';
 import './style.css';
 import {
     CLOUD,
@@ -10,6 +13,7 @@ import {
     SNOW,
     WINDY,
 } from '../../constans/weathers';
+import { number } from 'prop-types';
 
 const data = {
     temperature:3,
@@ -17,14 +21,6 @@ const data = {
     humidity: 23,
     wind: '10 m/s',
 }
-
-const data2 = {
-    temperature:33,
-    weatherState: SNOW,
-    humidity: 2,
-    wind: '90 m/s',
-}
-
 class WeatherLocation extends Component {
 
     constructor(){
@@ -34,23 +30,45 @@ class WeatherLocation extends Component {
             city: "Celaya",
             data: data,
         };
+        console.log("constructor");
     }
 
+    componentDidMount() {
+        console.log("componentDidMount");
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log("componentDidUpdate");
+    }
+
+    componentWillMount() {
+        console.log("componentWillMount");
+    }
+
+    componentWillUndate(nextProps, nextState) {
+        console.log("componentDidUpdate");
+    }
+    
     handleUpdateClick = () =>{
-        console.log("clic");
-        this.setState(
-        {
-            data: data2,
+        fetch(api_weather).then(resolve =>{
+            return resolve.json();
+        }).then(data=>{
+            const newWeather = transformWeather(data);
+            console.log(newWeather);
+            this.setState({
+                data: newWeather
+            });
         });
     }
 
     render(){
+        console.log("render");
         const {city, data}= this.state;
         return(
             <div className="weatherLocationContent">
                 <Location city={city}></Location>
                 <WeatherData data={data}></WeatherData>
-                <button onClick={this.handleUpdateClick}>Actualizar</button>
+                <button className="btnUpdate" onClick={this.handleUpdateClick}>Actualizar</button>
             </div>
         );
     }
