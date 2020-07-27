@@ -6,3 +6,6 @@ npx create-react-app nombredelproyecto
 yarn add prop-types
 ------para agregar icons weather de react--------
 yarn add react-weathericons
+------Agregar materialUI-----
+yarn add @material-ui/core
+-----Libreria para convertir los grados-------
