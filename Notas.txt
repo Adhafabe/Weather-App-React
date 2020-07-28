@@ -8,4 +8,5 @@ yarn add prop-types
 yarn add react-weathericons
 ------Agregar materialUI-----
 yarn add @material-ui/core
------Libreria para convertir los grados-------
+-----Agregar libreria flexbox-grid-------
+yarn add react-flexbox-grid

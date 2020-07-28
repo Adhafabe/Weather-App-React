@@ -1,0 +1,23 @@
+.locationList{
+    padding: 20px;
+    height: 560px;
+    overflow-y: auto;
+}
+
+.pronosticoTitle{
+    text-align: center;
+}
+.pronosticoTitle h3,
+.pronosticoTitle h2{
+    margin: 0;
+}
+
+.pronosticoTitle h3{
+   color: gray;
+   font-weight: lighter;
+}
+
+@media screen and (max-width: 768px){
+    .locationList{
+    }
+}
