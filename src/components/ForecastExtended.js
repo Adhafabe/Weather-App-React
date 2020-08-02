@@ -31,8 +31,19 @@ class ForecastExtended extends Component{
     }
 
     componentDidMount(){
+        this.updateCity(this.props.city);
+    }
+
+    componentWillReceiveProps(nextProps){
+        if(nextProps.city !== this.props.city){
+            this.setState({forecastData: null});
+            this.updateCity(nextProps.city);
+        }
+    }
+
+    updateCity = city => {
         //fech or axios
-        const url_forecast = `${url}?q=${this.props.city}&appid=${api_key}`;
+        const url_forecast = `${url}?q=${city}&appid=${api_key}`;
 
         fetch(url_forecast).then(
             data=>(data.json())
@@ -40,14 +51,20 @@ class ForecastExtended extends Component{
             weather_data =>{
                 console.log(weather_data);
                 const forecastData = transformForescast(weather_data);
+                console.log(forecastData);
                 this.setState({forecastData});
             }
         );
     }
 
-    renderForecast (){
-        return "render items";
-        // return days.map(day=>(<ForecastItem weekDay={day} hour={10} data={data}></ForecastItem>));
+    renderForecastItemDay(forecastData){
+        return forecastData.map( forecast => (
+        <ForecastItem
+            key={`${forecast.weekday} ${forecast.hour}`}
+            weekDay={forecast.weekday}
+            hour={forecast.hour}
+            data={forecast.data}>
+        </ForecastItem>));
     }
 
     rederProgress = () =>{
@@ -61,9 +78,9 @@ class ForecastExtended extends Component{
         return (
             <div>
                 <div className="pronosticoTitle">
-                    <h2>Pronóstico extendido de </h2>
+                    <h2>Pronóstico extendido para</h2>
                     <h3>{city}</h3>
-                    {forecastData ? this.renderForecast() : this.rederProgress()}
+                    {forecastData ? this.renderForecastItemDay(forecastData) : this.rederProgress()}
                 </div>
             </div>
         );
