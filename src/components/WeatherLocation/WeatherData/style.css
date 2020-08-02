@@ -3,7 +3,7 @@ body{
 }
 
 .weatherDataContent{
-    background: rgba(248,181,0,1) ;
+    background:#fff;
     color:purple;
     border-radius: 12px;
 }
@@ -15,7 +15,7 @@ body{
 }
 
 .weatherTemperatureContent {
-    background: rgb(248, 181, 0);
+    background:#fff;
     padding: 8px;
 }
 

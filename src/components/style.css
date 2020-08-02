@@ -1,6 +1,6 @@
 .locationList{
     padding: 20px;
-    height: 560px;
+    height: 100vh;
     overflow-y: auto;
 }
 
@@ -15,6 +15,22 @@
 .pronosticoTitle h3{
    color: gray;
    font-weight: lighter;
+}
+
+.forecastItem {
+    background: #c42268;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    -webkit-box-shadow: 10px 10px 9px -1px rgba(0,0,0,0.3);
+    -moz-box-shadow: 10px 10px 9px -1px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 9px -1px rgba(0,0,0,0.3);
+}
+
+h3.forecastTitle{
+    font-size: 18px;
+    font-weight: normal;
+    padding: 7px;
+    color: #fff;
 }
 
 @media screen and (max-width: 768px){

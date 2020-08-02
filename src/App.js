@@ -12,7 +12,7 @@ import './App.css';
 const cities = [
   "London, uk",
   "Querétaro, mx",
-  "Valencia, es",
+  "Celaya, mx",
   "Yucatan, mx",
   "Ciudad de México, mx"
 ];
@@ -45,15 +45,14 @@ class App extends Component {
             </Toolbar>
           </AppBar>
         </Row>
-        <Row>
-          <Col  xs={12} md={6}>
+        <Row className="contentWeather">
+          <Col  xs={12} md={5}>
               <LocationList
                 cities={cities}
                 onSelectedLocation={this.handleSelectionLocation}>
               </LocationList>
           </Col>
-          <Col xs={12} md={6}>
-            <Paper elevation={4}>
+          <Col xs={12} md={7}>
               <div className="details">
                 {
                   !city ?
@@ -62,7 +61,6 @@ class App extends Component {
                 }
 
               </div>
-            </Paper>
           </Col>
         </Row>
       </Grid>
