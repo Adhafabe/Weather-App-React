@@ -10,3 +10,6 @@ yarn add react-weathericons
 yarn add @material-ui/core
 -----Agregar libreria flexbox-grid-------
 yarn add react-flexbox-grid
+-----Instalando redux---------
+yarn add redux
+yarn add react-redux
