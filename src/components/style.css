@@ -32,8 +32,3 @@ h3.forecastTitle{
     padding: 7px;
     color: #fff;
 }
-
-@media screen and (max-width: 768px){
-    .locationList{
-    }
-}
