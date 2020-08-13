@@ -13,3 +13,4 @@ yarn add react-flexbox-grid
 -----Instalando redux---------
 yarn add redux
 yarn add react-redux
+yarn add redux-thunk
