@@ -11,12 +11,13 @@ const renderForecastItemDay = (forecastData)=>{
             hour={forecast.hour}
             data={forecast.data}>
         </ForecastItem>
-    ))
+    ));
 }
 
 const rederProgress = () =>{
     return <h3>cargando pronostico extendido ...</h3>;
 }
+
 const ForecastExtended = ({city, forecastData}) => (
 
         <div className="forecastContent">
@@ -27,7 +28,7 @@ const ForecastExtended = ({city, forecastData}) => (
             </div>
         </div>
     
-)
+);
 
 ForecastExtended.propTypes={
     city: PropTypes.string.isRequired,
