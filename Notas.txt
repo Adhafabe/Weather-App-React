@@ -15,4 +15,6 @@ yarn add redux
 yarn add react-redux
 yarn add redux-thunk
 ----reselect----
-yarn install --save reselect
+yarn add reselect
+---para agregar la libreria de lodash.topairs----
+yarn add lodash.topairs
