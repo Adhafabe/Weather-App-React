@@ -7,17 +7,17 @@ export const cities = (state = {}, action) =>{
         case SET_FORECAST_DATA:
             {
                 const{city,forecastData} = action.payload;
-                return {...state, [city]:{forecastData}};
+                return {...state, [city]:{...state[city], forecastData}};
             }
         case GET_WEATHER_CITY:
             {
                 const city = action.payload;
-                return {...state, [city]:{weather:null}};
+                return {...state, [city]:{...state[city],weather:null}};
             }
         case SET_WEATHER_CITY:
             {
                 const {city, weather} = action.payload;
-                return {...state, [city]:{weather}};
+                return {...state, [city]:{...state[city],weather}};
             }
         default:
             return state;
